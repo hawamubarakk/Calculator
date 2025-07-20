@@ -1,9 +1,64 @@
 <!DOCTYPE html>
 <html>
   <head>
-   
-    <link rel="stylesheet" href="style.css">
-    <title>Calculator</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      .operators {
+        font-size: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: rgb(234, 155, 10);
+        border: none;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        font-weight: bold;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .button {
+        font-size: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: grey;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        font-weight: bold;  
+        cursor: pointer;
+        margin-right: 10px;
+        margin-bottom: 10px;  
+        text-align: center;
+      }
+
+      .button1 {
+        font-size: 15px;
+        width: 60px;
+        height: 60px;
+        background-color: grey;
+        color: white;
+        border: none;
+        padding: 20px;
+        border-radius: 50%;
+        font-weight: bold;  
+        cursor: pointer;
+        margin-right: 10px;
+        margin-bottom: 10px;  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
     <!-- Create an element to display the calculation. -->
@@ -73,6 +128,10 @@
       "class = "button">.</button>
 
       <button onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
         calculation = eval(calculation);
 
         // Display the calculation on the page
@@ -99,7 +158,26 @@
       "class = "button1">Clear</button>
     </p>
 
-    <script src="script.js"></script>
+    <script>
+      let calculation = localStorage.getItem('calculation') || '';
 
+      // Display the calculation when the page first loads.
+      displayCalculation();
+
+      function updateCalculation(value) {
+        calculation += value;
+
+        // Display the calculation on the page
+        // instead of console.log
+        displayCalculation();
+
+        localStorage.setItem('calculation', calculation);
+      }
+
+      function displayCalculation() {
+        document.querySelector('.js-calculation')
+          .innerHTML = calculation;
+      }
+    </script>
   </body>
 </html>

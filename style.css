@@ -1,0 +1,56 @@
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      .operators {
+        font-size: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: rgb(234, 155, 10);
+        border: none;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        font-weight: bold;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: center;
+      }
+
+      .button {
+        font-size: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: grey;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        font-weight: bold;  
+        cursor: pointer;
+        margin-right: 10px;
+        margin-bottom: 10px;  
+        text-align: center;
+      }
+
+      .button1 {
+        font-size: 15px;
+        width: 60px;
+        height: 60px;
+        background-color: grey;
+        color: white;
+        border: none;
+        padding: 20px;
+        border-radius: 50%;
+        font-weight: bold;  
+        cursor: pointer;
+        margin-right: 10px;
+        margin-bottom: 10px;  
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
