@@ -9,7 +9,7 @@ body {
 }
 
 .calculator-container {
-  background: #04122a;
+  background: linear-gradient(135deg, #1e3c72, #04122a);
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 8px 25px white;
