@@ -73,7 +73,7 @@ button:active {
 .clear-btn {
   grid-column: span 4;
   border-radius: 10px;
-  background: #d73a28;
+  background: #f39c12;
 }
 
 .clear-btn:hover {
